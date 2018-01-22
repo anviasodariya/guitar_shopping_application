@@ -1,0 +1,19 @@
+.purchase1
+{
+margin-left: 400px;
+font-weight: bold;
+font-size: 100%;
+ 
+}
+.guitarimage
+{
+border: 2px solid;
+margin-left: 100px;
+font-weight: bold;
+margin-right:60px; 
+/* border-spacing:100px;  */
+}
+.selectedimage
+{
+  margin-left:400px;  
+}

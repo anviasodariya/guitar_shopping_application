@@ -1,0 +1,16 @@
+<div class="guitarimage">
+    <p class="purchase1">
+        Selected guitar
+       </p>
+ <img src="{{guiterimage[index[0]]?.image_path}}" alt="image" class="selectedimage">
+ </div>
+ <div class="guitarimage">
+   <p><u>Product Description:</u>{{guiterimage[index]?.product_description}}</p>
+   <p><u>Price/Item:</u>{{guiterimage[index]?.price}}</p>
+   <p><u>shipping_details:</u>{{guiterimage[index]?.shipping_details}}</p>
+    <p><u>stock_availability:</u>{{guiterimage[index]?.stock_availability}}</p>
+   <p><u>no_of_items:</u>{{guiterimage[index]?.no_of_items}}</p>
+   </div>
+<app-purchase [abc]="index"></app-purchase>
+
+ 

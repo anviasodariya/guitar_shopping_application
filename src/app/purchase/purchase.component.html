@@ -1,0 +1,90 @@
+<p class="guitardetail">Purchase Details
+  </p>
+  <div class="formdetails">
+    
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)" novalidate>
+    <label>FIRST NAME</label> 
+    <input type="text" #firstname="ngModel" class="form-control" required minlength="2" name="firstname" ngModel>
+    <!-- <b>{{firstname.className}}</b>  it is showing every form class like nh dirty,ng valid. -->
+   <div *ngIf="firstname.errors && (firstname.dirty || firstname.touched)" class="alert alert-danger">
+      <div [hidden]="!firstname.errors.required"> 
+        Firstname is required
+        </div> 
+        <div [hidden]="!firstname.errors.minlength"> 
+           enter Atleast 2 character
+            </div>
+            </div>
+            <div class="form-group">
+              <label>LAST NAME</label>
+              <input type="text" #lastname="ngModel" class="form-control"  maxlength="8" name="lastname" required ngModel>
+              <div *ngIf="lastname.errors && (lastname.dirty || lastname.touched)" class="alert alert-danger">
+                  <div [hidden]="!lastname.errors.required"> 
+                    Lastname is required
+                    </div> 
+                    <div [hidden]="!lastname.errors.maxlength"> 
+                       enter Atleast 8 character
+                    </div>
+              </div>
+          </div>
+            <div class="form-group">
+                <label>CC</label>
+                <input type="number" class="form-control" name="cc" #cc="ngModel" placeholder="CC" required  ngModel>
+                <div [hidden]="cc.valid || cc.pristine" class="alert alert-danger"> 
+                  cc is required
+                  </div>
+              </div>
+              <!-- <div class="form-group">
+                  <label>EMAIL</label>
+                  <input type="email" class="form-control"  [(ngModel)]="email" placeholder="Enter email"  required>
+                   </div> -->
+        <label>EMAIL</label>
+        <input name="contactemail" class="form-control" type="text" #contactemail="ngModel" ngModel required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+        <div class="md-errors-spacer" [hidden]="contactemail.valid || contactemail.untouched">
+              <div  *ngIf="contactemail.errors && contactemail.errors.required">
+              Email is required
+              </div>
+              <div  *ngIf="contactemail.errors && contactemail.errors.pattern">
+              Email is invalid
+              </div>
+       </div>
+       <label>Shipping Details</label><br>
+       <label>Address</label>
+          <input type="text" #address="ngModel" class="form-control" required minlength="2" name="address" ngModel><br>
+          <div *ngIf="address.errors && (address.dirty ||address.touched)" class="alert alert-danger">
+              <div [hidden]="!address.errors.required"> 
+                 Shipping details is required
+                </div> 
+                <div [hidden]="!address.errors.minlength"> 
+                   enter Atleast 2 character
+                    </div>
+                    </div>
+                    <label>State</label>
+                    <select name="selectedvalue" #selectedvalue="ngModel" ngModel required class="form-control">
+                        <option value="Los Angeles">Los Angeles</option>
+                        <option value="New Jersery">New Jersery</option>
+                        <option value="New York">New York</option>
+                       
+                      </select><div [hidden]="selectedvalue.valid || selectedvalue.pristine" class="alert alert-danger"> 
+                          state is required
+                          </div><br><br>
+                        
+      <button [disabled]="!userForm.valid" type="submit" class="btn btn-primary" (click)="message=true" required>Go to Review</button>
+           
+  </form>
+  </div><br><br><br><br><br>
+   <div class="final1" *ngIf="message">
+    <p class="customer">Customer Information:</p><br>
+    First Name:{{firstname.value}}<br><br>
+    Last Name:{{lastname.value}}<br><br>
+    CC:{{cc.value}}<br><br>
+    <!-- EMAIL:{{email.value}}<br><br> -->
+    Email:{{contactemail.value}}<br><br>
+    shipping Details:{{address.value}}<br><br>
+    state:{{selectedvalue.value}}<br><br>
+    <!-- <button class="btn btn-primary">Buy</button> -->
+    <button type="submit" routerLink="/orderdetail" (click)="buy(abc)" class="btn btn-primary">Buy</button>
+     <button class="btn btn-primary" (click)="message=false">Edit</button>
+  </div>
+ <!-- <app-purchasebuy></app-purchasebuy> -->
+  
+

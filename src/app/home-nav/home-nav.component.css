@@ -1,0 +1,46 @@
+.heading
+{
+    /* margin-left:450px; */
+    background-color: steelblue;
+}
+.shopping
+{
+    font-size: 50px;
+    color: white;
+    margin-left:450px;
+}
+div.header
+{
+ height: 60px;
+  background:linear-gradient(steelblue, rgb(10, 27, 32));
+  border-bottom: 1px solid white; 
+}
+ul {
+    list-style-type: none;
+    margin: -20px;
+    padding: 0;
+    overflow: hidden;
+    margin-left: 276px;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 47px;
+	text-decoration: none;
+}
+li a:hover {
+    background-color: gray;
+}
+div.container1
+     {
+    width: 1000px;
+    height: 500px;
+    margin: 20px auto;
+    float: left;
+    border-top: 2px dotted #b38b0d;
+    background-color:darkblue;
+    }

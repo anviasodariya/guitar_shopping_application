@@ -1,0 +1,96 @@
+.firstdiv
+{
+    background-color: black;
+}
+
+.backgroundimg
+{
+    margin-left: 0;
+    height:400px;
+    width:900px;
+}
+img
+{
+    height:200px;
+    width:400px;
+    display: inline-block;
+    margin-left: 450px;
+}
+ .clicktobuybtn
+{
+ margin-left: 800px;   
+} 
+
+.accord
+{
+margin-left: 450px;
+}
+#image
+{
+    height:40%;
+    width:40%;
+     margin-left: 30px;  
+}
+.prevnextbtn
+{
+    margin-left: 350px;
+    
+      
+}
+.nextbtn
+{
+margin-left:430px;
+}
+/* #prevbtn
+{
+    margin-left: 350px;   
+}  */
+.collapse
+{
+    width:400px;
+}
+.buybtn
+{
+    margin-top: 30px; 
+    margin-left: 450px;
+}
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ccc;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.guitarbtn
+{
+    width: 400px;
+}
